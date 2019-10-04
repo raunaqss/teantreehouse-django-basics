@@ -1,8 +1,9 @@
 from django.shortcuts import render
-from django.http import HttpResponse
 from .models import Course
 # Create your views here.
 
 def course_list(request):
-    return HttpResponse(', '.join([str(c) for c in Course.objects.all()]))
+    '''Takes request and renders page with list of all courses'''
+    courses = Course.objects.all()
+    return render(request, 'courses/course_list.html', {'courses': courses})
     
