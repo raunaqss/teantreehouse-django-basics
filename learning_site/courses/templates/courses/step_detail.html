@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+{% block title %}{{ steps.0.course.title }} - Order {{ order }}{% endblock %}
+{% block content %}
+<h2>{{ steps.0.course.title }} - Order {{ order }}</h2>
+{% for step in steps %}
+<article>
+  <h4>{{ step.title }}</h4>
+  <p>{{ step.description }}</p>
+  {{ step.content|linebreaks }}
+</article>
+{% endfor %}
+{% endblock %}
