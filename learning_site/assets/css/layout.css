@@ -1,3 +1,7 @@
+.container {
+    padding: 3rem;
+}
+
 h1, h2 {
     color: pink;
 }
