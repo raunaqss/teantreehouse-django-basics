@@ -9,3 +9,17 @@ h1, h2 {
 .step-section {
     margin-left: 20px;
 }
+
+.cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.card {
+    flex-basis: 180px;
+}
+
+a {
+    text-decoration: none;
+}

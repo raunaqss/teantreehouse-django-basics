@@ -7,7 +7,7 @@
 </article>
 <section class='step-section'>
   {% for step in course.step_set.all %}
-  <h3>{{ step.title }}</h3>
+  <a href="{% url 'courses:step' step.course.pk step.order %}"><h3>{{ step.title }}</h3></a>
   {{ step.description }}
   {% endfor %}
 </section>

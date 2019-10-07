@@ -18,10 +18,11 @@ from django.urls import include, path
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from . import views
 
+app_name = 'learning_site'
 urlpatterns = [
-    path('courses/', include('courses.urls')),
+    path('courses/', include('courses.urls', namespace='courses')),
     path('admin/', admin.site.urls),
-    path('', views.hello_world, name='hello world'),
+    path('', views.hello_world, name='home'),
 ]
 
 urlpatterns += staticfiles_urlpatterns()
